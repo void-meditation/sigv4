@@ -126,7 +126,8 @@ class Sigv4Client implements BaseSigv4Client {
     if (this.sessionToken != null) {
       headers[_x_amz_security_token] = this.sessionToken;
     }
-    headers.remove(_host);
+
+    // headers.remove(_host);
 
     return headers;
   }
