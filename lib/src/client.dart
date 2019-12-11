@@ -115,7 +115,7 @@ class Sigv4Client implements BaseSigv4Client {
     /// Generate the `Authorization` headers
     headers[_authorization] = _generateAuthorization(
       method: method,
-      path: path,
+      path: parsedUri.path,
       queryParams: queryParameters,
       headers: headers,
       body: body,
